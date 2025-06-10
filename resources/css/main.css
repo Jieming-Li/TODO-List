@@ -1,0 +1,255 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(5, 40, 53); 
+    background-color: rgb(204, 226, 237); 
+    min-height:100vh;
+    font-size: large;
+}
+
+.main {
+    margin:8px;
+}
+
+.top {
+    display: flex;
+    background-color:rgb(58, 97, 180);
+    padding:20px;
+    justify-content: space-evenly;
+}
+
+.element {
+    flex-grow: 1;
+    font-size: xx-large;
+    text-align:center;
+}
+
+.form_element {
+    font-size: x-large;
+}
+
+.top_link {
+    background-color: rgb(91, 118, 176);
+    text-decoration: none;
+    padding:10px;
+    color: rgb(6, 55, 73);
+}
+
+a:hover{
+    background-color: rgb(72, 72, 96);
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main_content {
+    display: flex;
+    justify-content:center;
+}
+
+.main_button {
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+}
+
+table {
+    margin-top: 40px;;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    text-align: center;
+    font-size: 45px;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(58, 97, 180); 
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(155, 186, 201); 
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #0b0a0a;
+    border-radius: 8px; 
+    background-color: inherit;
+}
+
+td > a {
+    text-decoration: none;
+    color: rgb(5, 40, 53);
+}
+
+.countdown {
+    min-width: 120px; 
+    text-align: center; 
+}
+
+.delete {
+    width: 100px;
+}
+
+.deleteButton, .checkButton {
+    background-color: #1247cf; 
+    color: white; 
+    padding: 15px 20px; 
+    text-align: center;
+    border-radius: 8px;
+}
+
+.task-container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #b8dbf1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.task-details {
+    font-size: 2em;
+    line-height: 1.8;
+}
+
+.task-details div {
+    margin-bottom: 15px;
+}
+
+.task-details label {
+    font-weight: bold;
+    color: #21222a;
+}
+
+.create_container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+
+.create_container > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.create_container > input[type="text"], .create_container > input[type="date"], .create_container > textarea, .create_container > select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container {
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #b8dbf1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login_form > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text2"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.login_button, .create_button{
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.warn_button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.warn_body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort,
+.filter,
+.create {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sort button,
+.filter select,
+.create {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.sort button:hover,
+.filter select:hover,
+.create {
+    background-color: #f0f0f0;
+}
+
+.create {
+    text-decoration: none;
+    padding:10px;
+    color: rgb(6, 55, 73);
+}
+

@@ -1,0 +1,10 @@
+html
+  head
+    meta(charset='UTF-8')
+    title= warning
+    link(rel='stylesheet' href='css/main.css')
+  body
+    .warn_body
+        h1 You must login first!
+        form(action='/login', method='GET')
+            button.warn_button(type='submit') Login

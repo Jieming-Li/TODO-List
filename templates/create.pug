@@ -1,0 +1,28 @@
+html
+    head
+        meta(charset='UTF-8')
+        title Create Task
+        link(rel='stylesheet' href='css/main.css')
+    body
+        .top
+            .element
+                a.top_link(href='main') Home
+            .element
+                a.top_link(href='../../create') Add Task
+            .element
+                form(method='GET' action='main')
+                    input#query.form_element(type='text' name='query')
+                    input.form_element(type='Submit' value='Search')
+            .elemetn 
+                a.top_link(href='/logout') Logout
+        h1 Create Task
+        form.create_container(action='/create' method='POST')
+            label(for='name') Title:
+            input#title(type='text' name='name' placeholder='Enter task name')
+            label(for='description') Description:
+            textarea#description(name='description' placeholder='Enter task description' rows='4')
+            label(for='location') Location:
+            textarea#location(name='location' placeholder='Enter location' rows='2')
+            label(for='deadline') Task Deadline:
+            input#endDate(type='datetime-local' name='deadline')
+            button.create_button(type='submit') Create Task

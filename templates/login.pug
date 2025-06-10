@@ -1,0 +1,19 @@
+html
+  head
+    meta(charset='UTF-8')
+    title Login
+    link(rel='stylesheet' href='css/main.css')
+  body
+    h1 Login
+    .login-container
+        form.login_form(action="/login" method="POST")
+            label(for="username") Username:
+            input#username(type="text2" name="username" required)
+            br
+            label(for="password") Password:
+            input#password(type="password" name="password" required)
+            br
+            button.login_button(type="submit") Login
+            br
+            span Don't have an account? 
+            a(href="/register") Register

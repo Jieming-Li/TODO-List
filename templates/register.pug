@@ -1,0 +1,16 @@
+html
+  head
+    meta(charset='UTF-8')
+    title Register
+    link(rel='stylesheet' href='css/main.css')
+  body
+    h1 Register
+    .login-container
+        form.login_form(action="/register" method="POST")
+            label(for="username") Username:
+            input#username(type="text2" name="username" required)
+            br
+            label(for="password") Password:
+            input#password(type="password" name="password" required)
+            br
+            button.login_button(type="submit") Register

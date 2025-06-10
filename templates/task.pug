@@ -1,0 +1,38 @@
+html
+  head
+    meta(charset='UTF-8')
+    title = Task Details
+    link(rel='stylesheet' href='../css/main.css')
+  body
+    .top
+        .element
+            a.top_link(href='../main') Home
+        .element
+            a.top_link(href='../../create') Add Task
+        .element
+            form(method='GET' action='../main')
+                input#query.form_element(type='text' name='query')
+                input.form_element(type='Submit' value='Search')
+        .elemetn 
+            a.top_link(href='/logout') Logout
+    .task-container
+      h1 Task Details
+      
+      .task-details
+        div
+          label Name: 
+          span= task.name
+        div
+          label Description: 
+          span= task.description
+        div
+          label Location: 
+          span= task.location
+        div
+          label End Time: 
+          - var newDate = new Date(task.end_time)
+          - var formattedDate = newDate.toString().replace(/\sGMT.*$/, "")
+          span= formattedDate
+        div
+          label Status: 
+          span= task.status

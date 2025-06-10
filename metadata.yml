@@ -1,0 +1,12 @@
+---
+:id: 297600247
+:submitters:
+- :name: Jieming Li
+  :email: li002396@umn.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2024-12-15 05:57:03.878050000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2024-12-14 21:57:03.878050000 Z
+:status: processed
+:score: 100.0

@@ -1,0 +1,53 @@
+html
+  head
+    meta(charset='UTF-8')
+    title= iDo
+    link(rel='stylesheet' href='css/main.css')
+  body
+    .top
+        .element
+            a.top_link(href='main') Home
+        .element
+            a.top_link(href='../../create') Add Task
+        .element
+            form(method='GET' action='main')
+                input#query.form_element(type='text' name='query')
+                input.form_element(type='Submit' value='Search')
+        .elemetn 
+            a.top_link(href='/logout') Logout
+    .main
+        h1 iDo
+        h2 Plan and Do!
+        .main_button
+            .sort 
+                button.sortButton Sort by Deadline
+            .filter
+                form#filterForm
+                    label(for='statusFilter') Filter by Status:
+                    select#statusFilter(name='status')
+                        option(value='all') All
+                        option(value='TODO') TODO
+                        option(value='DONE') DONE
+                        option(value='fail') Overdue and Undone
+            a.create(href='../../create') Add Task
+        .main_content
+            .todo-table
+                table
+                    tbody#TodoTableBody
+                        each item in tasks
+                            tr(data-description=item.description 
+                                data-listing-id=item.id
+                                data-status=item.status
+                                data-deadline=item.end_time)
+                                td
+                                    a(href=`task/${item.id}`) #{item.name}
+                                - var newDate = new Date(item.end_time)
+                                - var formattedDate = newDate.toString().replace(/\sGMT.*$/, "")
+                                td #{formattedDate}
+                                td.timeRemaining(data-end-date=item.end_time)
+                                td.status #{item.status}
+                                td.check
+                                    button.checkButton #{item.status === 'TODO' ? 'Check' : 'Uncheck'}
+                                td.delete
+                                    button.deleteButton Delete
+        script(src='/table')

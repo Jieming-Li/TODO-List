@@ -1,0 +1,21 @@
+html
+  head
+    meta(charset='UTF-8')
+    title= login_success
+    link(rel='stylesheet' href='css/main.css')
+  body
+    .top
+        .element
+            a.top_link(href='main') Home
+        .element
+            a.top_link(href='../../create') Add Task
+        .element
+            form(method='GET' action='main')
+                input#query.form_element(type='text' name='query')
+                input.form_element(type='Submit' value='Search')
+        .elemetn 
+            a.top_link(href='/logout') Logout
+    .warn_body
+        h1 Login Succesfully!
+        form(action='/main', method='GET')
+            button.warn_button(type='submit') Home
